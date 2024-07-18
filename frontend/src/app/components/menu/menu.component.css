@@ -1,0 +1,23 @@
+.navbar-links {
+    display: flex;
+    flex-direction: row; /* Alinea los enlaces horizontalmente */
+  }
+  
+  .nav-link {
+    padding: 10px;
+    text-decoration: none;
+    color: black; /* Cambia el color de texto según tu diseño */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+  }
+  
+  .text-danger {
+    color: red; /* Cambia el color del texto para el botón de cerrar sesión */
+  }
+  
+  .navbar-links a:not(:last-child) {
+    margin-right: 10px; /* Espacio entre los enlaces */
+  }
+  

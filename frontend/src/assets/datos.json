@@ -1,0 +1,96 @@
+{
+  "gastos": [
+    {
+      "id": "1",
+      "tipo": "Vivienda",
+      "ruc": "171345672001",
+      "valor": [
+        345.6
+      ]
+    },
+    {
+      "id": "2",
+      "tipo": "Salud",
+      "ruc": "171200972001",
+      "valor": [
+        45.6
+      ]
+    },
+    {
+      "id": "3",
+      "tipo": "Educacion",
+      "ruc": "171345672001",
+      "valor": [
+        1345.6
+      ]
+    },
+    {
+      "id": "4",
+      "tipo": "Vestimenta",
+      "ruc": "171345672001",
+      "valor": [
+        493.1
+      ]
+    },
+    {
+      "id": "5",
+      "tipo": "Alimentacion",
+      "ruc": "171345672001",
+      "valor": [
+        1841
+      ]
+    },
+    {
+      "id": "6",
+      "tipo": "Alimentacion",
+      "ruc": "1726642711001",
+      "valor": [
+        5021
+      ]
+    },
+    {
+      "id": "7",
+      "tipo": "Educacion",
+      "ruc": "1726642711001",
+      "valor": [
+        600
+      ]
+    },
+    {
+      "id": "8",
+      "tipo": "Salud",
+      "ruc": "1726642711000",
+      "valor": "650"
+    },
+    {
+      "id": "9",
+      "tipo": "Salud",
+      "ruc": "0202004479001",
+      "valor": "1000"
+    },
+    {
+      "id": "10",
+      "tipo": "Alimentacion",
+      "ruc": "0202004479001",
+      "valor": "1899.99"
+    },
+    {
+      "id": 11,
+      "tipo": "Alimentacion",
+      "ruc": "1726642711000",
+      "valor": "5000"
+    },
+    {
+      "id": 12,
+      "tipo": "Vivienda",
+      "ruc": "1726642711000",
+      "valor": "2000"
+    },
+    {
+      "id": 13,
+      "tipo": "Alimentacion",
+      "ruc": "1726642711000",
+      "valor": "40000"
+    }
+  ]
+}

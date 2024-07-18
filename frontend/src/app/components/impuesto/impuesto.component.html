@@ -1,0 +1,34 @@
+<form>
+    <div class="form-group">
+        <label for="cedula">Número de cédula</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="cedula">
+    </div>
+    <div class="form-group">
+        <label for="sueldo">Sueldo anual</label>
+        <input type="number" class="form-control" id="sueldo" name="sueldo" [(ngModel)]="sueldo">
+    </div>
+    <h1>Deducciones por gastos personales:</h1>
+    <div class="form-group">
+        <label for="deducciones_vivienda">Vivienda</label>
+        <input type="number" class="form-control" id="deducciones_vivienda" name="deducciones_vivienda" [(ngModel)]="deducciones_vivienda" max="3809.65">
+    </div>
+    <div class="form-group">
+        <label for="deducciones_salud">Salud</label>
+        <input type="number" class="form-control" id="deducciones_salud" name="deducciones_salud" [(ngModel)]="deducciones_salud" max="15238.60">
+    </div>
+    <div class="form-group">
+        <label for="deducciones_educacion">Educacion</label>
+        <input type="number" class="form-control" id="deducciones_educacion" name="deducciones_educacion" [(ngModel)]="deducciones_educacion" max="3809.65">
+    </div>
+    <div class="form-group">
+        <label for="deducciones_vestimenta">Vestimenta</label>
+        <input type="number" class="form-control" id="deducciones_vestimenta" name="deducciones_vestimenta" [(ngModel)]="deducciones_vestimenta" max="3809.65">
+    </div>
+    <div class="form-group">
+        <label for="deducciones_alimentacion">Alimentacion</label>
+        <input type="number" class="form-control" id="deducciones_alimentacion" name="deducciones_alimentacion" [(ngModel)]="deducciones_alimentacion" max="3809.65">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="onSubmit()">Calcular Impuesto</button>
+</form>
+<h3>Impuesto a la Renta Calculado</h3>
+<p>{{ renta }}</p>

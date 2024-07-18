@@ -1,0 +1,13 @@
+<nav>
+    <div *ngIf="isAuthenticated" class="navbar-links">
+      <a class="nav-link" routerLink="/reporte" routerLinkActive="activo">Reporte</a>
+      <a class="nav-link" routerLink="/impuesto" routerLinkActive="activo">Impuesto a la Renta</a>
+      <a class="nav-link text-danger" (click)="logOut()" style="cursor: pointer">Cerrar sesión</a>
+    </div>
+    <div *ngIf="!isAuthenticated" class="navbar-links">
+      <a class="nav-link" routerLink="/informacion" routerLinkActive="activo">Información</a> 
+      <a class="nav-link" routerLink="/factura" routerLinkActive="activo">Registro de Facturas</a>
+      <a class="nav-link" routerLink="/login" routerLinkActive="activo">Login</a>
+    </div>
+  </nav>
+  
