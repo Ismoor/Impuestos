@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Gasto } from '../modelos/gasto';
 import { Observable } from 'rxjs';
 
-const configUrl = 'http://localhost:3000/gastos';
+const configUrl = 'http://18.220.242.169:3003/gastos';
 
 @Injectable({
   providedIn: 'root'

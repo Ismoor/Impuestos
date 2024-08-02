@@ -10,9 +10,9 @@ import { LocalStorageService } from './local-storage.service';
   providedIn: 'root'
 })
 export class LoginService {
-  private getUsuariosURL = "http://localhost:3000/api/v1/usuarios";
-  private regUser = "http://localhost:3000/api/v1/registro";
-  private loginUrl = "http://localhost:3000/api/v1/login";
+  private getUsuariosURL = "http://18.220.242.169:3003/api/v1/usuarios";
+  private regUser = "http://18.220.242.169:3003/api/v1/registro";
+  private loginUrl = "http://18.220.242.169:3003/api/v1/login";
 
   constructor(private http: HttpClient, private localStorageService: LocalStorageService) {}
 

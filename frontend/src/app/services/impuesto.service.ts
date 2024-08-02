@@ -7,7 +7,7 @@ import {Impuesto} from '../../app/modelos/impuesto'
   providedIn: 'root'
 })
 export class ImpuestoService {
-  private impuestosURL = 'http://localhost:3000/api/v1/impuestos'; 
+  private impuestosURL = 'http://http://18.220.242.169:3003/api/v1/impuestos'; 
 
   constructor(private http: HttpClient) {}
 
