@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Gasto } from '../modelos/gasto';
 import { Observable } from 'rxjs';
@@ -22,3 +22,4 @@ export class GastoService {
     return this.httpclient.post<Gasto>(configUrl, gasto, { headers });
   }
 }
+*/

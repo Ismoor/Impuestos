@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { Usuario } from "../modelos/usuario";
 import { UsuarioLogin } from "../modelos/usuarioLogin";
 import { LocalStorageService } from './local-storage.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,11 @@ export class LoginService {
   private regUser = "http://18.220.242.169:3003/api/v1/registro";
   private loginUrl = "http://18.220.242.169:3003/api/v1/login";
 
-  constructor(private http: HttpClient, private localStorageService: LocalStorageService) {}
+  constructor(
+    private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: object,
+    private localStorageService: LocalStorageService
+  ) {}
 
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.getUsuariosURL);
@@ -33,14 +38,21 @@ export class LoginService {
   }
 
   saveToken(token: string): void {
-    this.localStorageService.setItem("authToken", token);
+    if (isPlatformBrowser(this.platformId)) {
+      this.localStorageService.setItem("authToken", token);
+    }
   }
 
   getToken(): string | null {
-    return this.localStorageService.getItem("authToken");
+    if (isPlatformBrowser(this.platformId)) {
+      return this.localStorageService.getItem("authToken");
+    }
+    return null;
   }
 
   logOut(): void {
-    this.localStorageService.removeItem("authToken");
+    if (isPlatformBrowser(this.platformId)) {
+      this.localStorageService.removeItem("authToken");
+    }
   }
 }

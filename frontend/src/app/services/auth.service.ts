@@ -17,7 +17,7 @@ export class AuthService {
     this.checkAuthenticated();
   }
 
-  checkAuthenticated(): void {
+  private checkAuthenticated(): void {
     if (isPlatformBrowser(this.platformId)) {
       const token = localStorage.getItem('authToken');
       const isAuthenticated = !!token;
@@ -25,21 +25,21 @@ export class AuthService {
     }
   }
 
-  login(token: string): void {
+  public login(token: string): void {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem('authToken', token);
       this.isAuthenticatedSubject.next(true);
     }
   }
 
-  logout(): void {
+  public logout(): void {
     if (isPlatformBrowser(this.platformId)) {
       localStorage.removeItem('authToken');
       this.isAuthenticatedSubject.next(false);
     }
   }
 
-  isAuthenticated(): boolean {
+  public isAuthenticated(): boolean {
     return this.isAuthenticatedSubject.value;
   }
 }

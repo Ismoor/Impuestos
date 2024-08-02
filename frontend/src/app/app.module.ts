@@ -11,7 +11,7 @@ import { InformacionComponent } from './components/informacion/informacion.compo
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ReporteComponent } from './components/reporte/reporte.component';
 import { ImpuestoComponent } from './components/impuesto/impuesto.component';
-import { GastoService } from './services/gasto.service';
+//import { GastoService } from './services/gasto.service';
 import { UserService } from './services/user.service';
 import { RegistroComponent } from './components/registro/registro.component';
 import { LoginService } from './services/login.service';
@@ -40,7 +40,6 @@ import { LoginComponent } from './components/login/login.component';
   ],
   providers: [
     provideClientHydration(),
-    GastoService,
     UserService,
     LoginService
   ],

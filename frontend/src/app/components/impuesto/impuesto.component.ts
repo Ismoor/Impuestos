@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { Impuesto } from '../../modelos/impuesto'
-import { ImpuestoService } from '../../services/impuesto.service'
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Impuesto } from '../../modelos/impuesto';
+import { ImpuestoService } from '../../services/impuesto.service';
 import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-impuesto',
@@ -23,8 +24,11 @@ export class ImpuestoComponent {
   excedente: number = 0;
   renta: number = 0;
 
-  constructor(private impuestoService: ImpuestoService,private router:Router) {
-   }
+  constructor(
+    private impuestoService: ImpuestoService,
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) {}
 
   ngOnInit(): void { }
 

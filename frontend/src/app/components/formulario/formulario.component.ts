@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GastoService } from '../../services/gasto.service';
-import { Gasto } from '../../modelos/gasto';
+//import { GastoService } from '../../services/gasto.service';
+//import { Gasto } from '../../modelos/gasto';
 
 @Component({
   selector: 'app-formulario',
@@ -14,12 +14,12 @@ export class FormularioComponent implements OnInit {
   facturaJSON: string = '';
   maxId: number = 0;
 
-  constructor(private gastoService: GastoService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.gastoService.obtenerDatos().subscribe(gastos => {
+    /*this.gastoService.obtenerDatos().subscribe(gastos => {
       this.maxId = gastos.length > 0 ? Math.max(...gastos.map(g => g.id)) : 0;
-    });
+    });*/
   }
 
   onSubmit() {
@@ -33,9 +33,9 @@ export class FormularioComponent implements OnInit {
 
     this.facturaJSON = JSON.stringify(factura);
     console.log('Factura guardada en JSON:', this.facturaJSON);
-    this.gastoService.agregarGasto(factura).subscribe(response => {
+    /*this.gastoService.agregarGasto(factura).subscribe(response => {
       console.log('Gasto agregado:', response);
       // Optionally, reset the form or provide user feedback
-    });
+    });*/
   }
 }
